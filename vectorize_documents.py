@@ -1,3 +1,7 @@
+"""
+This script vectorizes documents
+"""
+
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -9,7 +13,7 @@ loader = DirectoryLoader(path="data", glob="*.pdf", loader_cls=PyPDFLoader)
 documents = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=2000, 
+    chunk_size=2000,
     chunk_overlap=500,
     separators=["\n\n", "\n", ".", " "]
 )
