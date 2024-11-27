@@ -1,0 +1,12 @@
+langchain-community
+langchain-core
+langchain-text-splitter
+langchain-huggingface
+langchain-chroma
+langchain-groq
+streamlit
+transformers
+chromadb
+torch
+sentence-transformers
+groq
