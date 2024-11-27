@@ -10,3 +10,4 @@ sentence-transformers
 huggingface-hub
 chromadb
 langchain
+pysqlite3-binary
