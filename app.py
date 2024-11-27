@@ -1,3 +1,7 @@
+"""
+This script initializes a Streamlit app using LangChain integrations.
+"""
+
 import os
 import json
 
@@ -15,12 +19,17 @@ if not os.path.exists(config_path):
     st.error("Config file not found!")
     st.stop()
 
-config_data = json.load(open(config_path))
+with open(config_path, encoding="utf-8") as config_file:
+    config_data = json.load(config_file)
+
 GROQ_API_KEY = config_data["GROQ_API_KEY"]
 os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 
 def setup_vectorstore():
+    """
+    Function to setup vectorstore
+    """
     persist_directory = f"{working_dir}/vector_db_dir"
     embeddings = HuggingFaceEmbeddings()
     vectorstore = Chroma(
@@ -31,6 +40,9 @@ def setup_vectorstore():
 
 
 def chat_chain(vectorstore):
+    """
+    Function to build chain
+    """
     llm = ChatGroq(model="llama-3.2-11b-vision-preview",
                    temperature=0)
     retriever = vectorstore.as_retriever()
