@@ -5,8 +5,8 @@ langchain-huggingface
 langchain-groq
 streamlit
 transformers
-chromadb
 torch
 sentence-transformers
-langchain
 huggingface-hub
+chromadb==0.3.25
+langchain==0.0.232
