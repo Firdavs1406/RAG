@@ -2,11 +2,11 @@ langchain-community
 langchain-core
 langchain-text-splitters
 langchain-huggingface
-langchain-chroma
 langchain-groq
 streamlit
 transformers
 chromadb
 torch
 sentence-transformers
-groq
+langchain
+huggingface-hub
