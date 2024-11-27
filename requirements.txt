@@ -8,5 +8,6 @@ transformers
 torch
 sentence-transformers
 huggingface-hub
-chromadb==0.3.25
-langchain==0.0.232
+chromadb
+langchain
+pysqlite3
